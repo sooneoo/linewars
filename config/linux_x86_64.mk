@@ -16,14 +16,9 @@ LIBS += -lalloc
 LIBS += -lm
 
 OBJS += $(CACHE)/main.o
-OBJS += $(CACHE)/soldier.o
 
 $(CACHE)/main.o: src/linewars/main.c
 	$(CC) $(CFLAGS) -c src/linewars/main.c -o $@
-
-
-$(CACHE)/soldier.o: src/linewars/soldier.c
-	$(CC) $(CFLAGS) -c src/linewars/soldier.c -o $@
 
 
 $(RELEASE)/$(TARGET): $(OBJS)
